@@ -5,6 +5,7 @@
 }
 
 body{
+    /* height:500vh; */
     background-color: rgb(31, 36, 47);
     position: relative;
 }
@@ -240,7 +241,7 @@ body{
     height: 100vh;
     width: 0px;
     background-color: rgb(197, 186, 200);
-    position: absolute;
+    position: fixed;
     top: 0rem;
     right: 0;
     border-top-left-radius: 10px;
