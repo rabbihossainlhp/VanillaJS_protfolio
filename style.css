@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(31, 36, 47);
+    position: relative;
+}
+
+.headerHero{
+    /* background-color: rgb(5, 120transparent, 88); */
+    background-image: url("./images/cover.jpg");
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    background-color: rgba(13, 51, 23, 0.196);
+    backdrop-filter: blur(5px);
+    width: 55%;
+    height: 3.5rem;
+    border-radius: 100px;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    border: 2px solid rgb(255, 47, 47);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar button{
+    width: 15%;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+.navbar button:active{
+    transform: scale(0.94);
+    transition: 5ms;
+}
+
+.UL{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    width:85%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.UL li{
+    font-weight: bold;
+    font-size: 22px;
+    width:fit-content;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    color: rgb(0, 255, 21);
+    padding: 0 10px;
+}
+.UL li:hover{
+    cursor: pointer;
+    background-color: rgba(143, 10, 10, 0.681);
+}
+.UL li:active{
+    transform: scale(0.95);
+}
+
+.pictureLine{
+    height: 55%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(31, 36, 47);
+    border-top: 2px solid rgb(229, 195, 91);
+    border-right: 1px solid rgb(229, 195, 91);
+    border-top-right-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.pictureBox{
+    height: 17rem;
+    width: 17rem;
+    background-color: rgb(34, 242, 242);
+    border-radius: 50%;
+    border: 5px solid rgb(213, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -1rem;
+    
+}
+
+.main_img{
+    height: 98%;
+    width: 98%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.OppositDiv{
+    margin-right: 25%;
+    border-right: 2px solid rgb(229, 195, 91);
+    border-left: 2px solid rgb(229, 195, 91);
+    padding: 0 2rem;
+    height: 50%;
+    text-align: center;
+    align-content: space-evenly;
+}
+
+.text1{
+    color: rgb(13, 217, 159);
+}
+.text2{
+    color: rgb(220, 20, 163);
+    margin-top: 0.5rem;
+}
+
+.rulerLine{
+    height: 2px;
+    background-color: rgb(229, 195, 91);
+    border: none;
+}
+
+/* for toggling body color (dark to light) */
+.toggleBodyColor{
+    background-color: rgb(251, 255, 255);
+}
+.moodBtnToggle{
+    background-color:rgb(31, 36, 47) !important;
+    color:rgb(251, 255, 255);
+}
+
+
+
+
+/* Here start the contactIcons div's style */
+.contactIcons{
+    height: 17rem;
+    width: 3rem;
+    /* background-color: red; */
+    position: fixed;
+    right: 1rem;
+    top: 16rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 5px;
+    z-index: 999;
+}
+.contactIcons .nextDiv{
+    width: 100%;
+    padding: 2px;
+    border: 1.5px solid rgb(220, 20, 163);
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    right: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    
+}
+
+.nextDiv:hover{
+    width: 300%;
+    right: 200%;
+
+}
+.attachedLink{
+    text-decoration: none;
+    outline: none;
+    
+}
+
+.nextDiv i{
+    font-size: 1.8rem;
+    padding: 5px;
+    color: rgb(42, 226, 57);
+}
+
+.nextDivText{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(76, 241, 247);
+    font-size: 1rem;
+    display: none;
+    transition-delay: 0.8s;    
+}
+
+.nextDiv:hover .nextDivText{
+    display: block;
+}
+
+/* Hiden navbar... */
+.hidenNavIcon{
+    display: none;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    right: 1.8rem;
+    top: 1.2rem;
+    border-radius: 50%;
+    background-color: rgba(198, 0, 215, 0.644);
+    text-align: center;
+    align-content: center;
+}
+.hidenNavIcon i{
+    color: rgb(255, 255, 255);
+    font-size: 2.1rem;
+    cursor: pointer;
+}
+.hidenNavIcon :active{
+    transform: scale(0.98);
+}
+
+
+/* body's overfolow */
+/* .bodyOverfollow{
+    overflow: hidden;
+} */
+
+
+/* style hiden block */
+.sideNav{
+    height: 100vh;
+    width: 0px;
+    background-color: rgb(197, 186, 200);
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    z-index: 10;
+    transition: width  1s ease;
+}
+
+.sideNav i{
+    font-size: 2.8rem;
+    color: rgb(0, 54, 5);
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    cursor: pointer;
+    border: 4px solid rgb(204, 86, 17);
+    padding: 0 5px;
+    border-radius: 50%;
+}
+.sideNav i:hover{
+    color: rgb(205, 230, 208);
+}
+.sideNav i:active{
+    transform: scale(0.97);
+}
+.sideNav ul{
+    position: absolute;
+    top: 5rem;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.sideNav ul li{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    text-align: start;    
+    align-content: center;
+    padding-left: 2rem;
+    cursor: pointer;
+    color: rgb(0, 54, 5);
+    transition: 0.2s;
+}
+.sideNav ul li:hover{
+    background-color: rgba(22, 9, 32, 0.759);
+    color: white;
+}
+
+
+
+
+
+@media(max-width:1100px){
+    .OppositDiv{
+        margin-right: 15%;
+    }
+}
+@media(max-width:915px){
+    .contactIcons{
+        display: none;
+    }
+}
+@media(max-width:880px){
+    .pictureLine{
+        padding: 0 5rem;
+        flex-direction: column;
+    }
+    .OppositDiv{
+        margin-right: 0;
+    }
+    .headerHero{
+        height: 20rem;
+    }
+    .pictureBox{
+        height: 10rem;
+        width: 10rem;
+    }
+    .text1,.text2{
+        font-size: 1.rem;
+    }
+    
+    
+}
+@media(max-width:780px){
+    .hidenNavIcon{
+        display: inline-block;
+    }
+    .navbar{
+        display: none;
+    }
+}
+@media(max-width:400px){
+    .text1,.text2{
+        font-size: 1rem;
+    }
+    .pictureBox{
+        height: 8rem;
+        width: 8rem;
+    }
+    .headerHero{
+        height: 17rem;
+    }
+    .hidenNavIcon{
+        height: 3rem;
+        width: 3rem;
+    }
+    .hidenNavIcon i{
+        font-size: 1.8rem;
+    }
+}
