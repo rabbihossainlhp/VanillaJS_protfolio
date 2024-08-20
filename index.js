@@ -305,6 +305,14 @@ const ContactSection=()=>{
     socialContact.classList.add("socialContact");
     contactParent.appendChild(socialContact);
 
+    //Push few img into this social contct...
+    let getUrlOfImg = ["./images/github.png","./images/linkd.png","./images/fb.png","./images/insta.jpeg"];
+    getUrlOfImg.forEach((item)=>{
+        let createImg = document.createElement("img");
+        createImg.src = item;
+        socialContact.appendChild(createImg);
+    })
+
     let mailContact = document.createElement("div");
     mailContact.classList.add("mailContact");
     contactParent.appendChild(mailContact);
@@ -315,9 +323,14 @@ const ContactSection=()=>{
     let input2 = document.createElement("input");
     input2.type = "email";input2.placeholder = "Email";
     mailContact.appendChild(input2);
-    let input3 = document.createElement("input");
+    let input3 = document.createElement("textarea");
     input3.type = "text"; input3.placeholder = "Write Message";
+    input3.rows = "15";
+    input3.classList.add("messageBox");
     mailContact.appendChild(input3);
+    let button = document.createElement("button");
+    button.innerText = "Send Message"
+    mailContact.appendChild(button);
 }
 
 

@@ -416,21 +416,81 @@ a{
 .ContactParent{
     width: 100%;
     margin-top: 15rem;
-    height: 85vh;
-    background-color: aliceblue;
+    height: 90vh;
+    /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.socialContact{
-    height: 30%;
-    width: 90%;
-    margin-top: 3rem;
-    background-color: aqua;
+.ContactParent h1{
+    margin-top: 2rem;
+    font-family: sans-serif;
+    font-size: 2.4rem;
+    color: rgb(220, 20, 163);
 }
 
+.socialContact{
+    height: 20%;
+    width: 90%;
+    margin-top: 3rem;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.socialContact img{
+    width: 220px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid rgb(251, 0, 255);
+    object-fit: cover;
+}
 
+.mailContact{
+    height: 80%;
+    width: 90%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.mailContact input{
+    height: 3rem;
+    width: 100%;
+    padding:  0 1rem;
+    border-radius: 8px;
+    border: 1px solid gray;
+    outline: none;
+    margin-top: 5px;
+}
+
+.messageBox{
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+    padding: 10px 0 0 10px;
+    margin-top: 10px;
+}
+
+.mailContact button{
+    width: 15rem;
+    height: 2.7rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(0, 255, 21);
+}
+.mailContact button:active{
+    transform: scale(0.95);
+}
 
 
 @media(max-width:1100px){
