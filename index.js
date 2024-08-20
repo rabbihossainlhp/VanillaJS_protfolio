@@ -16,6 +16,8 @@ const BuildFunc =()=>{
     generateContactElement();
     generateHidenNav();
     closeBtnAction();
+    generateAboutMe();
+    generateProjectSection();
 }
 
 
@@ -57,7 +59,11 @@ const generateElement = ()=>{
             document.querySelector("body").classList.toggle("toggleBodyColor");
             pictureLine.classList.toggle("toggleBodyColor");
             moodBtn.classList.toggle("moodBtnToggle");
-
+            if(document.body.style.color !="rgb(251, 255, 255)"){
+                moodBtn.style.backgroundColor == "white";
+            }else{
+                moodBtn.style.backgroundColor == "rgb(251, 255, 255)";
+            }
             //conditon for changin btn text..
             moodBtn.innerText == "LIGHT"?moodBtn.innerText = "DARK":moodBtn.innerText = "LIGHT";
     }
@@ -88,7 +94,7 @@ const generateElement = ()=>{
 
     let picture = document.createElement("img");
     picture.classList.add("main_img");
-    picture.src = "./images/Untitled design (4).jpg"
+    picture.src = "./images/d.jpg"
     pictureBox.appendChild(picture);
 
 }
@@ -106,7 +112,10 @@ const innerNav = (parentDiv)=>{
     for(let i = 0; i< listItem.length; i++){
         const createList = document.createElement("li");
         createList.classList.add("childList");
-        createList.innerText = listItem[i];
+
+        let link = document.createElement("a");
+        link.innerText = listItem[i];
+        createList.appendChild(link);
         UnorderList.appendChild(createList);
     }
 }
@@ -174,6 +183,26 @@ const generateHidenNav =()=>{
     innerIcon.classList.add("fa-xmark");
     sideNav.appendChild(innerIcon);
 
+    //inner color mood button....
+    let innerButtonHolder = document.createElement("div");
+    innerButtonHolder.classList.add("innerButtonHolder");
+
+    let innerMoodButton = document.createElement("i");
+    innerMoodButton.classList.add("fa-regular");
+    innerMoodButton.classList.add("fa-moon");
+    
+    innerButtonHolder.appendChild(innerMoodButton);
+    sideNav.appendChild(innerButtonHolder);
+    //add clickaction..... 
+    innerButtonHolder.onclick=()=>{
+        innerMoodButton.classList.toggle("innerButtonToggle");
+
+        document.body.classList.toggle("toggleBodyColor");
+        document.querySelector(".pictureLine").classList.toggle("toggleBodyColor");
+    };
+    //end here this innermood  button.s
+
+
     //unorderlist nav....
     let innerList = document.createElement("ul");
     sideNav.appendChild(innerList);
@@ -182,8 +211,11 @@ const generateHidenNav =()=>{
     let listItem = ["Home","About","Work","Contact"];
     for(let i = 0; i<listItem.length; i++){
         let listItems = document.createElement("li");
-        listItems.innerText = listItem[i];
         innerList.appendChild(listItems);
+
+        let link = document.createElement("a");
+        link.innerText = listItem[i];
+        listItems.appendChild(link);
     }
 
 }
@@ -195,6 +227,57 @@ document.querySelector(".sideNav i").addEventListener("click",()=>{
     document.querySelector(".sideNav").style.width = "0%";
 })    
 }
+
+
+//generate about me section.....
+const generateAboutMe=()=>{
+    let MeSectionDiv = document.createElement("div");
+    MeSectionDiv.classList.add("MeDiv");
+    document.body.appendChild(MeSectionDiv);
+
+    let childMe = document.createElement("div");
+    childMe.classList.add("childMe");
+    MeSectionDiv.appendChild(childMe);
+
+    let meHeader = document.createElement("h1");
+    meHeader.innerText = "(==Abut Me==)";
+    childMe.appendChild(meHeader);
+
+    let mePara = document.createElement("p");
+    mePara.innerText = "Hi, I'm Rabbi Hossain, a self-taught web developer with a passion for learning, especially in front-end development. I love creating visually appealing and user-friendly websites. Alongside web development, I also enjoy practicing data structures and algorithms with Java to sharpen my problem-solving skills. My journey in tech is driven by curiosity and a desire to constantly improve and grow.";
+    childMe.appendChild(mePara);
+}
+//Project Section...
+const generateProjectSection =()=>{
+    let ProjectContentDiv = document.createElement("div");
+    ProjectContentDiv.classList.add("ProjectContainer");
+    document.body.appendChild(ProjectContentDiv);
+    
+    let ProjectHeader = document.createElement("h1");
+    ProjectHeader.innerText = "My Projects Section";
+    ProjectContentDiv.appendChild(ProjectHeader);
+
+    let  ChildContainer = document.createElement("div");
+    ChildContainer.classList.add("ChildContainer");
+    ProjectContentDiv.appendChild(ChildContainer);
+
+    
+    //....3/4 divs into childConrainer for showcasing project..
+    let countDivCreate = [1,2,3];
+    countDivCreate.forEach(()=>{
+        let addingDiv = document.createElement("div");
+        addingDiv.classList.add("showcasing");
+        ProjectContentDiv.appendChild(addingDiv);
+
+        let innerImg = document.createElement("img");
+        addingDiv.appendChild(innerImg);
+
+        let innerP = document.createElement("p");
+        innerP.innerText = "Nice";
+        addingDiv.appendChild(innerP);
+    })
+}
+
 
 
 

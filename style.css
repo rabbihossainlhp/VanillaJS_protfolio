@@ -212,7 +212,7 @@ body{
     display: none;
     height: 3.5rem;
     width: 3.5rem;
-    position: absolute;
+    position: fixed;
     right: 1.8rem;
     top: 1.2rem;
     border-radius: 50%;
@@ -296,9 +296,67 @@ body{
     color: white;
 }
 
+.innerButtonHolder{
+    display: inline-block;
+    position: absolute;
+    right: 3.8rem;
+    text-align: center;
+    align-content: center;
+
+}
+.innerButtonHolder i{
+    border-color: rgb(1, 255, 170);
+    color: white;
+}
+/* innerButton toggle */
+.innerButtonHolder .innerButtonToggle{
+    color: black;
+    border-color: wheat;
+}
+
+
+/* about me section */
+.MeDiv{
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.childMe{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.childMe h1{
+    color: rgb(220, 20, 163);
+    font-family: sans-serif;
+}
+.childMe p{
+    color: rgb(0, 155, 16);
+    font-family: sans-serif;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+    text-align: center;
+}
 
 
 
+/* ProjectsDiv */
+.ProjectContainer{
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.ChildContainer{
+    width: 60%;
+}
 
 @media(max-width:1100px){
     .OppositDiv{
