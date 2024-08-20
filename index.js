@@ -1,4 +1,5 @@
 let headerHero = document.querySelector(".headerHero");
+headerHero.setAttribute("id","Home");
 
 
 
@@ -19,6 +20,7 @@ const BuildFunc =()=>{
     generateAboutMe();
     generateProjectSection();
     ContactSection();
+    Footer();
 }
 
 
@@ -117,7 +119,7 @@ const innerNav = (parentDiv)=>{
         createList.classList.add("childList");
 
         let link = document.createElement("a");
-        link.href = "#ProjectContainer";
+        link.href = `#${listItem[i]}`;
         link.innerText = listItem[i];
         createList.appendChild(link);
         UnorderList.appendChild(createList);
@@ -218,6 +220,7 @@ const generateHidenNav =()=>{
         innerList.appendChild(listItems);
 
         let link = document.createElement("a");
+        link.href = `#${listItem[i]}`;
         link.innerText = listItem[i];
         listItems.appendChild(link);
     }
@@ -237,6 +240,7 @@ document.querySelector(".sideNav i").addEventListener("click",()=>{
 const generateAboutMe=()=>{
     let MeSectionDiv = document.createElement("div");
     MeSectionDiv.classList.add("MeDiv");
+    MeSectionDiv.setAttribute("id","About");
     document.body.appendChild(MeSectionDiv);
 
     let childMe = document.createElement("div");
@@ -255,7 +259,7 @@ const generateAboutMe=()=>{
 const generateProjectSection =()=>{
     let ProjectContentDiv = document.createElement("div");
     ProjectContentDiv.classList.add("ProjectContainer");
-    ProjectContentDiv.setAttribute("id","ProjectContainer");
+    ProjectContentDiv.setAttribute("id","Work");
     document.body.appendChild(ProjectContentDiv);
     
     let ProjectHeader = document.createElement("h1");
@@ -295,6 +299,7 @@ const generateProjectSection =()=>{
 const ContactSection=()=>{
     let contactParent = document.createElement("div");
     contactParent.classList.add("ContactParent");
+    contactParent.setAttribute("id","Contact");
     document.body.appendChild(contactParent);
 
     let ContactParentHeader = document.createElement("h1");
@@ -333,6 +338,15 @@ const ContactSection=()=>{
     mailContact.appendChild(button);
 }
 
+
+//Footer function
+const Footer=()=>{
+    let mainDiv = document.createElement("footer");
+    document.body.appendChild(mainDiv);
+    let content = document.createElement("p");
+    content.innerText = "2024 All rights reserverd @rabbihossainlhp";
+    mainDiv.appendChild(content);
+}
 
 
 

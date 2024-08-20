@@ -492,6 +492,25 @@ a{
     transform: scale(0.95);
 }
 
+/* style footer from here */
+footer{
+        height: 7rem;
+        width: 100%;
+        position: absolute;
+        bottom: -20rem;
+        background-color: rgb(65, 77, 88);
+        text-align: center;
+        align-content: center;
+}
+
+footer p{
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
+
 
 @media(max-width:1100px){
     .OppositDiv{
@@ -521,7 +540,48 @@ a{
     .text1,.text2{
         font-size: 1.rem;
     }
-    
+    .MeDiv{
+        margin-top: 10rem;
+    }
+    .childMe p{
+        text-align: start;
+    }
+    .ProjectContainer{
+        height: 120vh;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10rem;
+    }
+    .ProjectContainer h1{
+        font-size: 1.7rem;
+        word-spacing: 0;
+        letter-spacing: 0;
+    }
+    .ChildContainer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2.3rem;
+        width: 70%;
+    }
+    .showcasing{
+        width: 100%;
+    }
+    .ContactParent h1{
+        font-size: 1.7rem;
+        padding: 0 5px;
+    }
+    .ContactParent{
+        height: 150vh;
+        text-align: center;
+    }
+    .mailContact{
+        height: 55%;
+    }
+    .socialContact{
+        flex-direction: column;
+        height: 45%;
+    }
     
 }
 @media(max-width:780px){
