@@ -18,6 +18,7 @@ const BuildFunc =()=>{
     closeBtnAction();
     generateAboutMe();
     generateProjectSection();
+    ContactSection();
 }
 
 
@@ -31,6 +32,8 @@ const generateElement = ()=>{
     navbar.classList.add("navbar");
     headerHero.appendChild(navbar);
     innerNav(navbar);
+    
+
 
 
     //lets create something for hidend navbar ....
@@ -114,6 +117,7 @@ const innerNav = (parentDiv)=>{
         createList.classList.add("childList");
 
         let link = document.createElement("a");
+        link.href = "#ProjectContainer";
         link.innerText = listItem[i];
         createList.appendChild(link);
         UnorderList.appendChild(createList);
@@ -251,10 +255,11 @@ const generateAboutMe=()=>{
 const generateProjectSection =()=>{
     let ProjectContentDiv = document.createElement("div");
     ProjectContentDiv.classList.add("ProjectContainer");
+    ProjectContentDiv.setAttribute("id","ProjectContainer");
     document.body.appendChild(ProjectContentDiv);
     
     let ProjectHeader = document.createElement("h1");
-    ProjectHeader.innerText = "My Projects Section";
+    ProjectHeader.innerText = "(==My Projects Section==)";
     ProjectContentDiv.appendChild(ProjectHeader);
 
     let  ChildContainer = document.createElement("div");
@@ -263,20 +268,58 @@ const generateProjectSection =()=>{
 
     
     //....3/4 divs into childConrainer for showcasing project..
-    let countDivCreate = [1,2,3];
-    countDivCreate.forEach(()=>{
+    let countDivCreate = ["Currency Converter","BG Changer","Memory Card Game"];
+    let countImgLink = [
+        "./images/project1.png",
+        "./images/project2.png",
+        "./images/project3.png"
+    ];
+    countDivCreate.forEach((items,index)=>{
+        // console.log(items,index);
         let addingDiv = document.createElement("div");
         addingDiv.classList.add("showcasing");
-        ProjectContentDiv.appendChild(addingDiv);
+        ChildContainer.appendChild(addingDiv);
 
         let innerImg = document.createElement("img");
+        innerImg.src = countImgLink[index];
         addingDiv.appendChild(innerImg);
 
         let innerP = document.createElement("p");
-        innerP.innerText = "Nice";
+        innerP.innerText = items;
         addingDiv.appendChild(innerP);
     })
 }
+
+
+//contact section...
+const ContactSection=()=>{
+    let contactParent = document.createElement("div");
+    contactParent.classList.add("ContactParent");
+    document.body.appendChild(contactParent);
+
+    let ContactParentHeader = document.createElement("h1");
+    ContactParentHeader.innerText = "Let's Connect And Code Something Extraordinary.";
+    contactParent.appendChild(ContactParentHeader);
+
+    let socialContact = document.createElement("div");
+    socialContact.classList.add("socialContact");
+    contactParent.appendChild(socialContact);
+
+    let mailContact = document.createElement("div");
+    mailContact.classList.add("mailContact");
+    contactParent.appendChild(mailContact);
+
+    let input1 = document.createElement("input");
+    input1.type = "text";input1.placeholder = "Your Name";
+    mailContact.appendChild(input1);
+    let input2 = document.createElement("input");
+    input2.type = "email";input2.placeholder = "Email";
+    mailContact.appendChild(input2);
+    let input3 = document.createElement("input");
+    input3.type = "text"; input3.placeholder = "Write Message";
+    mailContact.appendChild(input3);
+}
+
 
 
 
